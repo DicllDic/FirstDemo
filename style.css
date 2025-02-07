@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,0.2)50%,  rgba(0,0,0,0.2)50%), url(image/background.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+}
+
+.main .upperPanner{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+.main .upperPanner h1{
+    margin-left: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+    font-size: 70px;
+}
+
+.main .upperPanner h1 span{
+    color: orange;
+}
+
+.main .offScreenMenu{
+    top: 133px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: 100px;
+    height: 160px;
+    left: -400px;
+    position: fixed;
+    transition: ease 0.4s;
+    color: white;
+}
+
+.offScreenMenu.active{
+    left: 0;
+}
+
+.main ul li{
+    list-style: none;
+    width: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ham{
+    top:90px;
+    left: 10px;
+    height: 25px;
+    width: 30px;
+    position: fixed;
+}
+
+.ham span{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+.ham span:nth-child(1) {
+    top: 25%;
+}
+
+.ham span:nth-child(3) {
+    top: 75%;
+}
+
+.ham.active span:nth-child(1){
+    top:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham.active span:nth-child(2){
+    opacity: 0;
+}
+.ham.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.detailsAddition{
+    right:0;
+    bottom:0;
+    position:absolute;
+    width: 250px;
+    height: 100px;
+}
+
+.detailsAddition .communityList{
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    position: absolute;
+    right: 0;
+}
+
+.detailsAddition .communityList li{
+    padding: 0;
+    height: 30px;
+    width: 36px;
+    
+}
+
+.icon{
+    display: inline;
+    height: 33px;
+    width: 33px;
+    opacity: 0.7;
+}
+
+.icon:hover{
+    opacity: 1;
+}
